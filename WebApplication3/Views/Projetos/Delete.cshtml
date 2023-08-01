@@ -1,0 +1,96 @@
+﻿@model WebApplication3.Models.Projeto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Exclusão de registro</h2>
+
+<h3>Confirme?</h3>
+<div>
+    <h4>Projeto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrevisaoFim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPrevisaoFim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orcamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orcamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Risco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Risco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdGerente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdGerente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Apagar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
